@@ -9,6 +9,8 @@
 * [Motivation](#motivation)
   * [Personal](#personal)
   * [Question](#question)
+* [Exploratory Data Analysis](#Exploratory-Data-Analysis)
+  * [Pipeline](#pipeline-source)
 * [Tools Used](#tools-used)
 * [Contact](#contact-information)
 
@@ -23,6 +25,12 @@ I have always been interested in how machines identify images and the models tha
 With many complex technologies in the world today, there is always a simple starting point. Before we can start to have machines sort and label things in real life, we have to start with the basics; classifying 2D images of black and white drawings. 
 Can we build a model to distinguish hand drawn human facial features? We will begin with the general shape of a face and then move to add more features such as: eyes, ears, mouths, nose, and a beard.
 
+## Exploratory Data Analysis
+
+### Pipeline (Source)
+
+Dataset: 100000+ .npy files per facial feature
+Google's [Neural Network](https://adventuresinmachinelearning.com/python-tensorflow-tutorial/) was able to achieve a recognition rate of over 90% across 345 different categories of doodles. 
 
 ## Tools Used
 
