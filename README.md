@@ -54,31 +54,32 @@ Can we build a model to distinguish hand drawn human facial features? We will be
 <!-- ![](images/Pipeline.jpeg) -->
 
 ### Data Overview
-* 1. Dataset: 100000+ label .npy and ndjson files per facial feature from [Quick-Draw](https://quickdraw.withgoogle.com/)
-* 2. 4 total facial features: face, eyes, nose, and ears
-* 3. 183 unique countries out of 196 countries (UN considers 241 countries-fun fact!)
-* 4. Each drawing contained information about the number of strokes, location, timestamp, recognition(binary), and label
-* 5. Google's [Neural Network](https://adventuresinmachinelearning.com/python-tensorflow-tutorial/) was able to achieve a recognition rate of over 91% across 345 different categories of doodles
-* 6. Drawing Examples
+  1. Dataset: 100000+ label .npy and ndjson files per facial feature from [Quick-Draw](https://quickdraw.withgoogle.com/)
+  2. 4 total facial features: face, eyes, nose, and ears
+  3. 183 unique countries out of 196 countries (UN considers 241 countries-fun fact!)
+  4. Each drawing contained information about the number of strokes, location, timestamp, recognition(binary), and label
+  5. Google's [Neural Network](https://adventuresinmachinelearning.com/python-tensorflow-tutorial/) was able to achieve a recognition rate of over 91% across 345 different categories of doodles
+  6. Drawing Examples
 Below are drawings that Google's NN recognized and followed by drawings that were not. 
-True faces:
+
+True faces: \
 ![](images/row_true_faces.png)
-False faces:
+False faces: \
 ![](images/row_false_faces.png)
 
-True eyes:
+True eyes: \
 ![](images/row_true_eyes.png)
-False eyes:
+False eyes: \
 ![](images/row_false_eyes.png)
 
-True noses:
+True noses: \
 ![](images/row_true_nose.png)
-False noses:
+False noses: \
 ![](images/row_false_nose.png)
 
-True ears:
+True ears: \
 ![](images/row_true_ear.png)
-False ear:
+False ear: \
 ![](images/row_false_ear.png)
 
 For the purposes of training and testing our model, we will be using only images that were corrected identified by Google's model to avoid unnecessary errors in our model. 
