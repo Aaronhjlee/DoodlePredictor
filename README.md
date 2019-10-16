@@ -12,9 +12,9 @@
   * [Personal](#personal)
   * [Question](#question)
 * [Strategy](#strategy)
-* [Exploratory Data Analysis](#Exploratory-Data-Analysis)
+* [Exploratory Data Analysis](#exploratory-data-analysis)
   * [Pipeline](#pipeline-source)
-  * []
+* [Principal Component Analysis](principal-component-analysis-(pca))
 * [Conclusion](#conclusion)
 * [Future Analysis](#future-analysis)
 * [Tools Used](#tools-used)
@@ -58,33 +58,50 @@ Can we build a model to distinguish hand drawn human facial features? We will be
   2. 4 total facial features: face, eyes, nose, and ears
   3. 183 unique countries out of 196 countries (UN considers 241 countries-fun fact!)
   4. Each drawing contained information about the number of strokes, location, timestamp, recognition(binary), and label
-  5. Google's [Neural Network](https://adventuresinmachinelearning.com/python-tensorflow-tutorial/) was able to achieve a recognition rate of over 91% across 345 different categories of doodles
-  6. Drawing Examples
+  5. Sample 5000 images randomly from each facial feature category for a grand total of 20,000 images in our available dataset
+  6. Google's [Neural Network](https://adventuresinmachinelearning.com/python-tensorflow-tutorial/) was able to achieve a recognition rate of over 91% across 345 different categories of doodles
+  7. Drawing Examples
 Below are drawings that Google's NN recognized and followed by drawings that were not. 
 
 True faces: \
-![](images/row_true_faces.png)
+![](images/row_true_faces.png) <p align="center"> \
 False faces: \
-![](images/row_false_faces.png)
+![](images/row_false_faces.png) <p align="center">
 
 True eyes: \
-![](images/row_true_eyes.png)
+![](images/row_true_eyes.png)  <p align="center"> \
 False eyes: \
-![](images/row_false_eyes.png)
+![](images/row_false_eyes.png) <p align="center">
 
 True noses: \
-![](images/row_true_nose.png)
+![](images/row_true_nose.png) <p align="center"> \
 False noses: \
-![](images/row_false_nose.png)
+![](images/row_false_nose.png) <p align="center">
 
 True ears: \
-![](images/row_true_ear.png)
+![](images/row_true_ear.png) <p align="center"> \
 False ear: \
-![](images/row_false_ear.png)
+![](images/row_false_ear.png) <p align="center">
 
-For the purposes of training and testing our model, we will be using only images that were corrected identified by Google's model to avoid unnecessary errors in our model. 
+For the purposes of training and testing our model, we will be using only images that were **corrected identified** by Google's model to avoid unnecessary errors in our model. 
 
 
+## Principal Component Analysis (PCA)
+
+Before we start any sort of modeling, we have to manage the number of features we are dealing with. Since each image is 28 x 28 [pixels](https://en.wikipedia.org/wiki/Pixel), this gives us a total of 784 pixel image which equates to 784 features for our models to account for. That's way too many! Therefore we must apply [principal component analysis](https://en.wikipedia.org/wiki/Principal_component_analysis) (orthoganal transformations) in order to convert a set of correlated observations into linearly uncorrelated variables called *principal components*. 
+
+### 2D PCA Plot
+
+We start this process by applying a [standard scaler](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html) to transoform the values that make up our images followed by PCA of 2 principal components. 
+
+![](images/two_comp_pca_1.png)
+<p align="center">
+
+We can see that there is a clear distinction between the face and the eyes, however, there seems to be an overlap of the nose and ears. I wonder what we can do about this...
+
+### 3D PCA Plot
+
+We can continue to explore the different clusters by bringing this into 3 dimensions!
 
 
 
