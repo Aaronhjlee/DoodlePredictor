@@ -1,4 +1,4 @@
-![](images/)
+![](images/doodle_predictor_banner.png)
 
 # DoodlePredictor
 **Predicting what category an image belongs to based on Google "Quick, Draw"**
@@ -15,6 +15,7 @@
 * [Exploratory Data Analysis](#exploratory-data-analysis)
   * [Pipeline](#pipeline-source)
 * [Principal Component Analysis](principal-component-analysis-(pca))
+* [Machine Learning Modeling](machine-learning-models)
 * [Conclusion](#conclusion)
 * [Future Analysis](#future-analysis)
 * [Tools Used](#tools-used)
@@ -38,7 +39,7 @@ Can we build a model to distinguish hand drawn human facial features? We will be
 #### 2. Exploratory Data Analysis
 * Transform with Principal Component Analysis
 * Find Ideal Varience Percentage / Number of Components
-#### 3. Compare Predictive Modeling
+#### 3. Compare Machine-Learning Models
 * [Logistic Regression Classifier](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html)
 * [Decision Tree Classifier](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html)
 * [Random Forest Classifier](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)
@@ -59,27 +60,27 @@ Can we build a model to distinguish hand drawn human facial features? We will be
   3. 183 unique countries out of 196 countries (UN considers 241 countries-fun fact!)
   4. Each drawing contained information about the number of strokes, location, timestamp, recognition(binary), and label
   5. Sample 5000 images randomly from each facial feature category for a grand total of 20,000 images in our available dataset
-  6. Google's [Neural Network](https://adventuresinmachinelearning.com/python-tensorflow-tutorial/) was able to achieve a recognition rate of over 91% across 345 different categories of doodles
+  6. Google's [Neural Network](https://adventuresinmachinelearning.com/python-tensorflow-tutorial/) was able to achieve a recognition rate of over *91%* across 345 different categories of doodles
   7. Drawing Examples
 Below are drawings that Google's NN recognized and followed by drawings that were not. 
 
 True faces: \
-![](images/row_true_faces.png) <p align="center"> \
+![](images/row_true_faces.png) <p align="center"> 
 False faces: \
 ![](images/row_false_faces.png) <p align="center">
 
 True eyes: \
-![](images/row_true_eyes.png)  <p align="center"> \
+![](images/row_true_eyes.png)  <p align="center"> 
 False eyes: \
 ![](images/row_false_eyes.png) <p align="center">
 
 True noses: \
-![](images/row_true_nose.png) <p align="center"> \
+![](images/row_true_nose.png) <p align="center"> 
 False noses: \
 ![](images/row_false_nose.png) <p align="center">
 
 True ears: \
-![](images/row_true_ear.png) <p align="center"> \
+![](images/row_true_ear.png) <p align="center">
 False ear: \
 ![](images/row_false_ear.png) <p align="center">
 
@@ -94,14 +95,28 @@ Before we start any sort of modeling, we have to manage the number of features w
 
 We start this process by applying a [standard scaler](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html) to transoform the values that make up our images followed by PCA of 2 principal components. 
 
-![](images/two_comp_pca_1.png)
-<p align="center">
+![](images/two_comp_pca_1.png) <p align="center">
 
 We can see that there is a clear distinction between the face and the eyes, however, there seems to be an overlap of the nose and ears. I wonder what we can do about this...
 
 ### 3D PCA Plot
 
 We can continue to explore the different clusters by bringing this into 3 dimensions!
+
+![](images/3D_PCA.gif) <p align="center">
+
+### More Dimensions and its Effects
+
+Generally speaking, the more dimensions we add (more principal components) to the our models, the more accurate the results. Let's see how many components we need to achieve a high [varience percentage](https://www.myaccountingcourse.com/accounting-dictionary/percent-variance); the higher the percentage the better our prediction. 
+
+![](n_comp_var.png) <p align="center">
+
+As we can see, the more PC's we add, the higher the varience percentage we get. To put this into perspective, the number of components we add, the more distinct our lines become, making it easier for our machine-learning models to comprehend and sort.
+
+![](n_comp_faces.png)
+
+## Machine Learning Models
+
 
 
 
