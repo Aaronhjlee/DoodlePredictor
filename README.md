@@ -64,31 +64,31 @@ Can we build a model to distinguish hand drawn human facial features? We will be
   7. Drawing Examples
 Below are drawings that Google's NN recognized and followed by drawings that were not. 
 
-True faces: \
+True faces: \ 
 ![](images/row_true_faces.png) 
 <p align="center"> 
-False faces: \
+False faces: \ 
 ![](images/row_false_faces.png) 
 <p align="center">
 
-True eyes: \
+True eyes: \ 
 ![](images/row_true_eyes.png)  
 <p align="center"> 
-False eyes: \
+False eyes: \ 
 ![](images/row_false_eyes.png) 
 <p align="center">
 
-True noses: \
+True noses: \ 
 ![](images/row_true_nose.png) 
 <p align="center"> 
-False noses: \
+False noses: \ 
 ![](images/row_false_nose.png) 
 <p align="center">
 
-True ears: \
+True ears: \ 
 ![](images/row_true_ear.png) 
 <p align="center">
-False ear: \
+False ear: \ 
 ![](images/row_false_ear.png) 
 <p align="center">
 
@@ -103,7 +103,8 @@ Before we start any sort of modeling, we have to manage the number of features w
 
 We start this process by applying a [standard scaler](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html) to transoform the values that make up our images followed by PCA of 2 principal components. 
 
-![](images/two_comp_pca_1.png) <p align="center">
+![](images/two_comp_pca_1.png) 
+<p align="center">
 
 We can see that there is a clear distinction between the face and the eyes, however, there seems to be an overlap of the nose and ears. I wonder what we can do about this...
 
@@ -111,7 +112,8 @@ We can see that there is a clear distinction between the face and the eyes, howe
 
 We can continue to explore the different clusters by bringing this into 3 dimensions!
 
-![](images/3D_PCA.gif) <p align="center">
+![](images/3D_PCA.gif) 
+<p align="center">
 
 ### More Dimensions and its Effects
 
