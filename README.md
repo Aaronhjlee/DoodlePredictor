@@ -146,9 +146,12 @@ The top two models we will be optimizing are: **Gradient Boosting Classifier** a
 
 The results of the grid search for the 2 models those that follow:
 
-![](images/class_reports_tuning.png)
+![](images/class_reports_tuned.png)
 
 From the class reports above, we can see that SVC is our best model to classify hand drawn facial features with an accuracy of **95%**.
+
+## Conclusion
+
 
 
 ## Future Analysis
