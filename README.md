@@ -137,7 +137,18 @@ As we can see, the more PC's we add, the higher the varience percentage we get. 
 
 ## Machine Learning Models
 
-In an attempt to find the best model for predicting the correct label for each drawing, we decided to try the following: Logistic Regression, Decision Tree, Random Forest, Gradient Boosting, and Support Vector Machine. Below are the summaries
+In an attempt to find the best model for predicting the correct label for each drawing, we decided to try the following: Logistic Regression, Decision Tree, Random Forest, Gradient Boosting, and Support Vector Machine. Below are the summaries of the 5 different models with no tuning.
+
+![](images/class_reports.png)
+
+One interesting thing to note is that the category our models got wrong the most were the 'face' category. The top 2 most accurate categories dependant on models were the eyes and nose. 
+The top two models we will be optimizing are: **Gradient Boosting Classifier** and Support Vector **Classifier**
+
+The results of the grid search for the 2 models those that follow:
+
+![](images/class_reports_tuning.png)
+
+From the class reports above, we can see that SVC is our best model to classify hand drawn facial features with an accuracy of **95%**.
 
 
 ## Future Analysis
