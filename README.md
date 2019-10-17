@@ -65,24 +65,32 @@ Can we build a model to distinguish hand drawn human facial features? We will be
 Below are drawings that Google's NN recognized and followed by drawings that were not. 
 
 True faces: \
-![](images/row_true_faces.png) <p align="center"> 
+![](images/row_true_faces.png) 
+<p align="center"> 
 False faces: \
-![](images/row_false_faces.png) <p align="center">
+![](images/row_false_faces.png) 
+<p align="center">
 
 True eyes: \
-![](images/row_true_eyes.png)  <p align="center"> 
+![](images/row_true_eyes.png)  
+<p align="center"> 
 False eyes: \
-![](images/row_false_eyes.png) <p align="center">
+![](images/row_false_eyes.png) 
+<p align="center">
 
 True noses: \
-![](images/row_true_nose.png) <p align="center"> 
+![](images/row_true_nose.png) 
+<p align="center"> 
 False noses: \
-![](images/row_false_nose.png) <p align="center">
+![](images/row_false_nose.png) 
+<p align="center">
 
 True ears: \
-![](images/row_true_ear.png) <p align="center">
+![](images/row_true_ear.png) 
+<p align="center">
 False ear: \
-![](images/row_false_ear.png) <p align="center">
+![](images/row_false_ear.png) 
+<p align="center">
 
 For the purposes of training and testing our model, we will be using only images that were **corrected identified** by Google's model to avoid unnecessary errors in our model. 
 
@@ -109,15 +117,17 @@ We can continue to explore the different clusters by bringing this into 3 dimens
 
 Generally speaking, the more dimensions we add (more principal components) to the our models, the more accurate the results. Let's see how many components we need to achieve a high [varience percentage](https://www.myaccountingcourse.com/accounting-dictionary/percent-variance); the higher the percentage the better our prediction. 
 
-![](n_comp_var.png) <p align="center">
+![](images/n_comp_var.png) 
+<p align="center">
 
 As we can see, the more PC's we add, the higher the varience percentage we get. To put this into perspective, the number of components we add, the more distinct our lines become, making it easier for our machine-learning models to comprehend and sort.
 
-![](n_comp_faces.png)
+![](images/n_comp_faces.png)
+<p align="center">
 
 ## Machine Learning Models
 
-
+In an attempt to find the best model for predicting the correct label for each drawing, we decided to try the following: Logistic Regression, Decision Tree, Random Forest, Gradient Boosting, and Support Vector Machine. Below 
 
 
 ## Future Analysis
