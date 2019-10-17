@@ -64,10 +64,14 @@ Can we build a model to distinguish hand drawn human facial features? We will be
   7. Drawing Examples
 Below are drawings that Google's NN recognized and followed by drawings that were not. 
 
-True faces: \ 
+True faces:
+
 ![](images/row_true_faces.png)<p align="center"> 
-False faces: \ 
+
+False faces:
+
 ![](images/row_false_faces.png)<p align="center">
+
 
 True eyes: \ 
 ![](images/row_true_eyes.png)<p align="center"> 
