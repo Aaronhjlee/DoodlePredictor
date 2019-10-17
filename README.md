@@ -1,10 +1,10 @@
 ![](images/doodle_predictor_banner.png)
 
-# DoodlePredictor
+# Doodle Predictor
 **Predicting what category an image belongs to based on Google "Quick, Draw"**
 <br>Aaron Lee
 <br>
-[Linkedin](http://www.linkedin.com/in/aaronhjlee) | [Github](https://github.com/aaronhjlee)
+[Linkedin](http://www.linkedin.com/in/aaronhjlee) | [Github](https://github.com/aaronhjlee)  |  aaronhjlee1@gmail.com
 
 ## Table of Contents
 
@@ -13,7 +13,6 @@
   * [Question](#question)
 * [Strategy](#strategy)
 * [Exploratory Data Analysis](#exploratory-data-analysis)
-  * [Pipeline](#pipeline-source)
 * [Principal Component Analysis](principal-component-analysis-(pca))
 * [Machine Learning Modeling](machine-learning-models)
 * [Conclusion](#conclusion)
@@ -49,10 +48,6 @@ Can we build a model to distinguish hand drawn human facial features? We will be
 * Use Grid Search to find the best hyper-parameters
 
 ## Exploratory Data Analysis
-
-### Pipeline (Source)
-
-<!-- ![](images/Pipeline.jpeg) -->
 
 ### Data Overview
   1. Dataset: 100000+ label .npy and ndjson files per facial feature from [Quick-Draw](https://quickdraw.withgoogle.com/)
@@ -142,7 +137,7 @@ In an attempt to find the best model for predicting the correct label for each d
 ![](images/class_reports.png)
 
 One interesting thing to note is that the category our models got wrong the most were the 'face' category. The top 2 most accurate categories dependant on models were the eyes and nose. 
-The top two models we will be optimizing are: **Gradient Boosting Classifier** and Support Vector **Classifier**
+The top two models we will be optimizing are: **Gradient Boosting Classifier** and Support Vector **Classifier**.
 
 The results of the grid search for the 2 models those that follow:
 
