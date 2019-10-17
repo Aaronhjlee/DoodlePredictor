@@ -65,32 +65,24 @@ Can we build a model to distinguish hand drawn human facial features? We will be
 Below are drawings that Google's NN recognized and followed by drawings that were not. 
 
 True faces: \ 
-![](images/row_true_faces.png) 
-<p align="center"> 
+![](images/row_true_faces.png)<p align="center"> 
 False faces: \ 
-![](images/row_false_faces.png) 
-<p align="center">
+![](images/row_false_faces.png)<p align="center">
 
 True eyes: \ 
-![](images/row_true_eyes.png)  
-<p align="center"> 
+![](images/row_true_eyes.png)<p align="center"> 
 False eyes: \ 
-![](images/row_false_eyes.png) 
-<p align="center">
+![](images/row_false_eyes.png)<p align="center">
 
 True noses: \ 
-![](images/row_true_nose.png) 
-<p align="center"> 
+![](images/row_true_nose.png)<p align="center"> 
 False noses: \ 
-![](images/row_false_nose.png) 
-<p align="center">
+![](images/row_false_nose.png)<p align="center">
 
 True ears: \ 
-![](images/row_true_ear.png) 
-<p align="center">
+![](images/row_true_ear.png)<p align="center">
 False ear: \ 
-![](images/row_false_ear.png) 
-<p align="center">
+![](images/row_false_ear.png)<p align="center">
 
 For the purposes of training and testing our model, we will be using only images that were **corrected identified** by Google's model to avoid unnecessary errors in our model. 
 
