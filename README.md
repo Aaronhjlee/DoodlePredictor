@@ -66,27 +66,39 @@ Below are drawings that Google's NN recognized and followed by drawings that wer
 
 True faces:
 
-![](images/row_true_faces.png)<p align="center"> 
+![](images/row_true_faces.png) 
 
 False faces:
 
-![](images/row_false_faces.png)<p align="center">
+![](images/row_false_faces.png)
 
 
-True eyes: \ 
-![](images/row_true_eyes.png)<p align="center"> 
-False eyes: \ 
-![](images/row_false_eyes.png)<p align="center">
+True eyes:
 
-True noses: \ 
-![](images/row_true_nose.png)<p align="center"> 
-False noses: \ 
-![](images/row_false_nose.png)<p align="center">
+![](images/row_true_eyes.png)
 
-True ears: \ 
-![](images/row_true_ear.png)<p align="center">
-False ear: \ 
-![](images/row_false_ear.png)<p align="center">
+False eyes:
+
+![](images/row_false_eyes.png)
+
+
+True noses:
+
+![](images/row_true_nose.png)
+
+False noses:
+
+![](images/row_false_nose.png)
+
+
+True ears:
+
+![](images/row_true_ear.png)
+
+False ear:
+
+![](images/row_false_ear.png)
+
 
 For the purposes of training and testing our model, we will be using only images that were **corrected identified** by Google's model to avoid unnecessary errors in our model. 
 
@@ -125,7 +137,7 @@ As we can see, the more PC's we add, the higher the varience percentage we get. 
 
 ## Machine Learning Models
 
-In an attempt to find the best model for predicting the correct label for each drawing, we decided to try the following: Logistic Regression, Decision Tree, Random Forest, Gradient Boosting, and Support Vector Machine. Below 
+In an attempt to find the best model for predicting the correct label for each drawing, we decided to try the following: Logistic Regression, Decision Tree, Random Forest, Gradient Boosting, and Support Vector Machine. Below are the summaries
 
 
 ## Future Analysis
