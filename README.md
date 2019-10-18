@@ -165,31 +165,31 @@ model = SVC(C=10, gamma=0.1)
 Another high level way of using machine learning models to predict results is by building a neural network. Google's 'Quick, Draw' game uses neural networks to guess which category the doodles belong to, so I attempted to build something similar to it, conceptually that is. 
 Below are the results from my process of building the NN:
 
-Optimizing for batch size(25 -> 32) to epochs(50)
+**Optimizing for batch size(25 -> 32) to epochs(50)**
 
-ccuracy = 0.4467
+Accuracy = 0.4467**
 
 ![](images/batch_epoch.png)
 
-Optimizing for the optomizer(adam)
+**Optimizing for the optomizer(adam)**
 
 Accuracy = 0.4464
 
 ![](images/optimizer.png)
 
-Optimizing for learning-rate(0.2) and momentum(0.4)
+**Optimizing for learning-rate(0.2) and momentum(0.4)**
 
 Accuracy = 0.4509
 
 ![](images/lr_momentum.png)
 
-Optimizing for neuron activation(softmax)
+**Optimizing for neuron activation(softmax)**
 
 Accuracy = 0.4531
 
 ![](images/activation.png)
 
-Optimizing for number of hidden layers(30)
+**Optimizing for number of hidden layers(30)**
 
 Accuracy = 0.4572
 
