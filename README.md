@@ -168,7 +168,7 @@ Below are the results from my process of building the NN:
 
 **Optimizing for batch size(25 -> 32) to epochs(50)**
 
-Accuracy = 0.4467**
+Accuracy = 0.4467
 
 ![](images/batch_epoch.png)
 
@@ -232,6 +232,6 @@ Aaron Lee is a Data Scientist with a background in education and portrait/landsc
 
 * Linkedin: [in/aaronhjlee](https://www.linkedin.com/in/aaronhjlee/)
 * Github: [/aaronhjlee](https://github.com/Aaronhjlee)
-* Email: [@aaronhjlee1@gmail.com](aaronhjlee1@gmail.com)
+* Email: [aaronhjlee1@gmail.com](aaronhjlee1@gmail.com)
 
 Copyright © 2019 Aaron Lee
