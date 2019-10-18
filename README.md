@@ -198,8 +198,8 @@ Accuracy = 0.4572
 At the end of it, we improved our model by 1.05%.
 
 There was more testing that was done:
-* varying number of layers
-* Applying PCA before
+* Varying number of layers
+* Applying PCA before and without PCA
 
 Neural networks are hard to navigate when you do not identify specific traits for each hidden layer to 'look for' such as edges, lines, corners,etc.
 
