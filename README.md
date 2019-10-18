@@ -37,7 +37,7 @@ Can we build a model to distinguish hand drawn human facial features? We will be
 #### 1. Load and Clean Data
 #### 2. Exploratory Data Analysis
 * Transform with Principal Component Analysis
-* Find Ideal Varience Percentage / Number of Components
+* Find Ideal Variance Percentage / Number of Components
 #### 3. Compare Machine-Learning Models
 * [Logistic Regression Classifier](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html)
 * [Decision Tree Classifier](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html)
@@ -46,6 +46,7 @@ Can we build a model to distinguish hand drawn human facial features? We will be
 * [Support Vector Machine Classifier](https://scikit-learn.org/stable/modules/svm.html)
 #### 4. Optimization 
 * Use Grid Search to find the best hyper-parameters
+#### 5. Neural Network (Bonus)
 
 ## Exploratory Data Analysis
 
@@ -120,12 +121,12 @@ We can continue to explore the different clusters by bringing this into 3 dimens
 
 ### More Dimensions and its Effects
 
-Generally speaking, the more dimensions we add (more principal components) to the our models, the more accurate the results. Let's see how many components we need to achieve a high [varience percentage](https://www.myaccountingcourse.com/accounting-dictionary/percent-variance); the higher the percentage the better our prediction. 
+Generally speaking, the more dimensions we add (more principal components) to the our models, the more accurate the results. Let's see how many components we need to achieve a high [variance percentage](https://www.myaccountingcourse.com/accounting-dictionary/percent-variance); the higher the percentage the better our prediction. 
 
 ![](images/n_comp_var.png) 
 <p align="center">
 
-As we can see, the more PC's we add, the higher the varience percentage we get. To put this into perspective, the number of components we add, the more distinct our lines become, making it easier for our machine-learning models to comprehend and sort.
+As we can see, the more principal components(PC) we add, the higher the variance percentage we get. To put this into perspective, the number of components we add, the more distinct our lines become, making it easier for our machine-learning models to comprehend and sort.
 
 ![](images/n_comp_faces.png)
 <p align="center">
@@ -137,7 +138,10 @@ In an attempt to find the best model for predicting the correct label for each d
 ![](images/class_reports.png)
 
 One interesting thing to note is that the category our models got wrong the most were the 'face' category. The top 2 most accurate categories dependant on models were the eyes and nose. 
-The top two models we will be optimizing are: **Gradient Boosting Classifier** and Support Vector **Classifier**.
+
+![](images/acc_to_var.png)
+
+From the graph above, we can visually see the the effect of variance percentage to the accuracy of each model. The top two models we will be optimizing are: **Gradient Boosting Classifier** and **Support Vector Classifier**.
 
 The results of the grid search for the 2 models those that follow:
 
@@ -149,12 +153,42 @@ From the class reports above, we can see that SVC is our best model to classify 
 
 1. PCA proved invaluable when working with datasets with lots of semi-correlated features to transform the data to lower dimensions.
 2. When classifying with only 2 classes, the machine learning models are able to very accurately predict which images belongs to which class. Accuracy dropped from 95% to 90% on average across the 5 tested models before basic tuning. 
-3. After tuning some hyperparameters, we were able to achieve 95% accuracy through the Support Vector Classifier model.
-4. Neural networks are hard to navigate when you do not identify specific traits for each hidden layer to 'look for' such as edges, lines, corners, etc.
+3. After tuning some hyperparameters, we were able to achieve 95% accuracy through the Support Vector Classifier model. (90% PCA)
+4. Support Vector Classifier possibly performed better because we a moderate penalty (C). This allows for misclasifications to happen within the [soft margin](https://towardsdatascience.com/support-vector-machines-soft-margin-formulation-and-kernel-trick-4c9729dc8efe) netting an overall positive gain in accuracy. Too high of a [gamma](https://medium.com/all-things-ai/in-depth-parameter-tuning-for-svc-758215394769), and we risk overfitting. 
+
+![](images/svc_high_g.png)
 
 ## Neural Network (Bonus)
 
+Another high level way of using machine learning models to predict results is by building a neural network. Google's 'Quick, Draw' game uses neural networks to guess which category the doodles belong to, so I attempted to build something similar to it, conceptually that is. 
+Below are the results from my process of building the NN:
 
+Optimizing for batch size(25 -> 32) to epochs(50)
+Accuracy = 0.4467
+![](images/batch_epoch.png)
+
+Optimizing for the optomizer(adam)
+Accuracy = 0.4464
+![](images/optimizer.png)
+
+Optimizing for learning-rate(0.2) and momentum(0.4)
+Accuracy = 0.4509
+![](images/lr_momentum.png)
+
+Optimizing for neuron activation(softmax)
+Accuracy = 0.4531
+![](images/activation.png)
+
+Optimizing for number of hidden layers(30)
+Accuracy = 0.4572
+![](images/final_nn.png)
+
+At the end of it, we improved our model by 1.05%.
+There was more testing that was done:
+* varying number of layers
+* Applying PCA before
+
+Neural networks are hard to navigate when you do not identify specific traits for each hidden layer to 'look for' such as edges, lines, corners, etc.
 
 ## Future Analysis
 
