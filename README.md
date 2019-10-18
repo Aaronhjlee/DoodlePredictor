@@ -13,9 +13,10 @@
   * [Question](#question)
 * [Strategy](#strategy)
 * [Exploratory Data Analysis](#exploratory-data-analysis)
-* [Principal Component Analysis](principal-component-analysis-(pca))
-* [Machine Learning Modeling](machine-learning-models)
+* [Principal Component Analysis](#principal-component-analysis-(pca))
+* [Machine Learning Modeling](#machine-learning-models)
 * [Conclusion](#conclusion)
+* [Neural Networks (bonus)](#neural-network-(bonus))
 * [Future Analysis](#future-analysis)
 * [Tools Used](#tools-used)
 * [References](#references)
@@ -157,7 +158,7 @@ From the class reports above, we can see that SVC is our best model to classify 
 3. After tuning some hyperparameters, we were able to achieve 95% accuracy through the Support Vector Classifier model. (90% PCA)
 4. Support Vector Classifier possibly performed better because we a moderate penalty (C). This allows for misclasifications to happen within the [soft margin](https://towardsdatascience.com/support-vector-machines-soft-margin-formulation-and-kernel-trick-4c9729dc8efe) netting an overall positive gain in accuracy. Too high of a [gamma](https://medium.com/all-things-ai/in-depth-parameter-tuning-for-svc-758215394769), and we risk overfitting. 
 
-model = SVC(C=10, gamma=0.1)
+model = SVC(C=10, kernel='rbf', gamma=0.1)
 ![](images/svc_high_g.png)
 
 ## Neural Network (Bonus)
