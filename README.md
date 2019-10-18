@@ -125,7 +125,7 @@ We can continue to explore the different clusters by bringing this into 3 dimens
 Generally speaking, the more dimensions we add (more principal components) to the our models, the more accurate the results. Let's see how many components we need to achieve a high [variance percentage](https://www.myaccountingcourse.com/accounting-dictionary/percent-variance); the higher the percentage the better our prediction. 
 
 ![](images/n_comp_var.png) 
-<p align="center">
+![](images/acc_to_var.png)
 
 As we can see, the more principal components(PC) we add, the higher the variance percentage we get. To put this into perspective, the number of components we add, the more distinct our lines become, making it easier for our machine-learning models to comprehend and sort.
 
@@ -140,7 +140,7 @@ In an attempt to find the best model for predicting the correct label for each d
 
 One interesting thing to note is that the category our models got wrong the most were the 'face' category. The top 2 most accurate categories dependant on models were the eyes and nose. 
 
-![](images/acc_to_var.png)
+![](images/score_group.png)
 
 From the graph above, we can visually see the the effect of variance percentage to the accuracy of each model. The top two models we will be optimizing are: **Gradient Boosting Classifier** and **Support Vector Classifier**.
 
