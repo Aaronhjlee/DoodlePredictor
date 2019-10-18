@@ -4,7 +4,7 @@
 **Predicting what category an image belongs to based on Google "Quick, Draw"**
 <br>Aaron Lee
 <br>
-[Linkedin](http://www.linkedin.com/in/aaronhjlee) | [Github](https://github.com/aaronhjlee)  |  aaronhjlee1@gmail.com
+[Linkedin](http://www.linkedin.com/in/aaronhjlee)  |  [Github](https://github.com/aaronhjlee)   |   aaronhjlee1@gmail.com
 
 ## Table of Contents
 
@@ -147,6 +147,13 @@ From the class reports above, we can see that SVC is our best model to classify 
 
 ## Conclusion
 
+1. PCA proved invaluable when working with datasets with lots of semi-correlated features to transform the data to lower dimensions.
+2. When classifying with only 2 classes, the machine learning models are able to very accurately predict which images belongs to which class. Accuracy dropped from 95% to 90% on average across the 5 tested models before basic tuning. 
+3. After tuning some hyperparameters, we were able to achieve 95% accuracy through the Support Vector Classifier model.
+4. Neural networks are hard to navigate when you do not identify specific traits for each hidden layer to 'look for' such as edges, lines, corners, etc.
+
+## Neural Network (Bonus)
+
 
 
 ## Future Analysis
@@ -169,8 +176,8 @@ From the class reports above, we can see that SVC is our best model to classify 
 
 ## References
 
-* https://github.com/Jasminehh/doodle_image_recognition_CNN
 * https://github.com/googlecreativelab/quickdraw-dataset#the-raw-moderated-dataset
+* https://github.com/Jasminehh/doodle_image_recognition_CNN
 
 ## Contact Information
 Aaron Lee is a Data Scientist with a background in education and portrait/landscape photography. His interests other than data science include music, photography, backpacking, basketball, and running. 
