@@ -166,31 +166,42 @@ Another high level way of using machine learning models to predict results is by
 Below are the results from my process of building the NN:
 
 Optimizing for batch size(25 -> 32) to epochs(50)
-Accuracy = 0.4467
+
+ccuracy = 0.4467
+
 ![](images/batch_epoch.png)
 
 Optimizing for the optomizer(adam)
+
 Accuracy = 0.4464
+
 ![](images/optimizer.png)
 
 Optimizing for learning-rate(0.2) and momentum(0.4)
+
 Accuracy = 0.4509
+
 ![](images/lr_momentum.png)
 
 Optimizing for neuron activation(softmax)
+
 Accuracy = 0.4531
+
 ![](images/activation.png)
 
 Optimizing for number of hidden layers(30)
+
 Accuracy = 0.4572
+
 ![](images/final_nn.png)
 
 At the end of it, we improved our model by 1.05%.
+
 There was more testing that was done:
 * varying number of layers
 * Applying PCA before
 
-Neural networks are hard to navigate when you do not identify specific traits for each hidden layer to 'look for' such as edges, lines, corners, etc.
+Neural networks are hard to navigate when you do not identify specific traits for each hidden layer to 'look for' such as edges, lines, corners,etc.
 
 ## Future Analysis
 
